@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's pizza</title>
+    <link rel="stylesheet" type="text/css" href="/tonypizza.css">
+</head>
+<body>
+    <header>
+        <div class="Pizza_logo">
+            <img src="uploads/Grafiskt material/tonys-pizza-logo.svg"></img>
+        </div>
+
+        <div class="Basket_logo">
+            <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
+        </div>
+    </header>
+
+    <div class="pizza_layout">
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/margherita.svg"></img>
+        </div>
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/capricciosa.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/marinara.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/quattro-formaggi.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/prosciutto-e-funghi.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/ortolana.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/quattro-stagioni.svg"></img>
+        </div>
+
+
+        <div class="pizza">
+            <img src="uploads/Grafiskt material/diavola.svg"></img>
+        </div>
+    </div>
+
+
+</body>
+</html>

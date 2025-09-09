@@ -1,0 +1,37 @@
+* {
+    background-color: white;
+
+}
+
+header {
+    display: flex;
+}
+
+.pizza_layout {
+    display: -ms-flexbox; 
+    flex-wrap: wrap;
+    flex-direction: column;
+
+}
+
+.Pizza_logo {
+    margin: auto;
+    padding: 1rem;
+    width: 700px;
+    height: auto;
+
+}
+
+.Basket_logo {
+    margin: auto;
+    width: 100px;
+    height: 100px;
+
+
+}
+
+.pizza {
+    width: 200px;
+    height: 200px;
+
+}
