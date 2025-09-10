@@ -7,56 +7,94 @@
     <link rel="stylesheet" type="text/css" href="/tonypizza.css">
 </head>
 <body>
-    <header>
-        <div class="Pizza_logo">
-            <img src="uploads/Grafiskt material/tonys-pizza-logo.svg"></img>
-        </div>
-
-        <div class="Basket_logo">
-            <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
-        </div>
-    </header>
-
-    <div class="pizza_layout">
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/margherita.svg"></img>
-        </div>
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/capricciosa.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/marinara.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/quattro-formaggi.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/prosciutto-e-funghi.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/ortolana.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/quattro-stagioni.svg"></img>
-        </div>
-
-
-        <div class="pizza">
-            <img src="uploads/Grafiskt material/diavola.svg"></img>
-        </div>
+    <div class="grid_wrapper">
+    <div id="tonyheader" class="Pizza_logo">
+        <img src="uploads/Grafiskt material/tonys-pizza-logo.svg"></img>
     </div>
 
+
+    <div id="kundkorg" class="Basket_logo">
+        <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
+    </div>
+
+                <div id="pizza_1" class="pizza">
+                <img src="uploads/Grafiskt material/margherita.svg"></img>
+                        <div class="pizza_text">
+                            <p> <b>Margherita</b></p>
+                            <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Basilika</p>
+                            <button type="button">Anpassa</button>
+                            <button type="button">Köp</button>
+                    </div>
+                </div>
+                <div id="pizza_2" class="pizza">
+                    <img src="uploads/Grafiskt material/marinara.svg"></img>
+                    <div class="pizza_text">
+                        <p> <b>Marinara</b></p>
+                        <p class="pizza_ingredients"> Tomatsås</p>
+                        <button type="button">Anpassa</button>
+                        <button type="button">Köp</button>
+                    </div>
+                </div>
+                <div id="pizza_3" class="pizza">
+                    <img src="uploads/Grafiskt material/prosciutto-e-funghi.svg"></img>
+                        <div class="pizza_text">
+                            <p> <b>Prosciutto e funghi</b></p>
+                            <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp</p>
+                            <button type="button">Anpassa</button>
+                            <button type="button">Köp</button>
+                    </div>
+                </div>
+                <div id="pizza_4" class="pizza">
+                    <img src="uploads/Grafiskt material/quattro-stagioni.svg"></img>
+                    <div class="pizza_text">
+                        <p class="pizza_ingredients"> <b>Quattro stagioni</b></p>
+                        <p> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp <br> Kronärtskocka <br> Oliver</p>
+                        <button type="button">Anpassa</button>
+                        <button type="button">Köp</button>
+                    </div>
+                </div>
+
+                <div id="pizza_5" class="pizza">
+                    <img src="uploads/Grafiskt material/capricciosa.svg"></img>
+                        <div class="pizza_text">
+                            <p> <b>Capricciosa</b></p>
+                            <p class="pizza_ingredients"> Tomatsås <br> Mozarella <br> Skinka <br> Svamp <br> Kronärtskocka</p>
+                            <button type="button">Anpassa</button>
+                            <button type="button">Köp</button>
+                    </div>
+                </div>
+
+                <div id="pizza_6" class="pizza">
+                    <img src="uploads/Grafiskt material/quattro-formaggi.svg"></img>
+                        <div class="pizza_text">
+                            <p> <b>Quattro formaggi</b></p>
+                            <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Parmesan <br> Pecorino <br> Gorgonzola</p>
+                            <button type="button">Anpassa</button>
+                            <button type="button">Köp</button>
+                    </div>
+
+                </div>
+
+                <div id="pizza_7" class="pizza">
+                <img src="uploads/Grafiskt material/ortolana.svg"></img>
+                        <div class="pizza_text">
+                            <p> <b>Ortolana</b></p>
+                            <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Paprika <br> Aubergine <br> Zucchini</p>
+                            <button type="button">Anpassa</button>
+                            <button type="button">Köp</button>
+                    </div>
+                </div>
+
+                <div id="pizza_8" class="pizza">
+                    <img src="uploads/Grafiskt material/diavola.svg"></img>
+                    <div class="pizza_text">
+                        <p> <b>Diavola</b></p>
+                        <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Salami <br> Paprika <br> Chili</p>
+                        <button type="button">Anpassa</button>
+                        <button type="button">Köp</button>
+                    </div>
+                </div>
+    </div>
 
 </body>
 </html>

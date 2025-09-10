@@ -3,35 +3,108 @@
 
 }
 
-header {
+
+#kundkorg {
+    margin-top: 100px;
+    margin-left: 22%;
     display: flex;
+    grid-area: knd;
 }
 
-.pizza_layout {
-    display: -ms-flexbox; 
-    flex-wrap: wrap;
-    flex-direction: column;
 
+.grid_wrapper {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 3fr 3fr 1fr;
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-areas: 
+    "hea hea knd"
+    "div1 div5 knd"
+    "div2 div6 knd"
+    "div3 div7 knd"
+    "div4 div8 knd"
+}
+
+#pizza_1 {
+    grid-area: div1;
+}
+
+#pizza_2 {
+    grid-area: div2;
+}
+
+#pizza_3 {
+    grid-area: div3;
+}
+
+#pizza_4 {
+    grid-area: div4;
+}
+#pizza_5 {
+    grid-area: div5;
+}
+#pizza_6 {
+    grid-area: div6;
+}
+#pizza_7 {
+    grid-area: div7;
+}
+#pizza_8 {
+    grid-area: div8;
 }
 
 .Pizza_logo {
-    margin: auto;
-    padding: 1rem;
-    width: 700px;
-    height: auto;
-
+    width: 80%;
+    height: 87%;
+    grid-area: hea;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-items: center;
+    justify-self: center;
 }
 
 .Basket_logo {
-    margin: auto;
+    margin: 1px;
     width: 100px;
     height: 100px;
 
 
 }
 
-.pizza {
+.pizza_text {
+    padding-left: 1rem;
+    margin-top: 10px;
+}
+
+.pizza_text button {
+    border: none;
+    justify-content: center;
+}
+
+.pizza_text button:nth-child(3) {
+    background-color: antiquewhite;
+}
+
+.pizza_text button:nth-child(4) {
+    background-color: rgb(0, 205, 0);
+}
+
+.pizza img {
     width: 200px;
     height: 200px;
 
+}
+
+.pizza {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:center ;
+    text-align: left;
+ 
+}
+
+.pizza_ingredients {
+    color: gray;
 }
