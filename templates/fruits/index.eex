@@ -18,14 +18,12 @@
 
 
 <ul>
-  <%= for fruit <- fruits do %>
+  <%= for pizza <- pizza do %>
     <li>
-    	<a href="/fruits/<%= fruit.id %>">
-			<%= fruit.name %> - <%= fruit.tastiness %>
+    	<a href="/fruits/<%= pizza.id %>">
+			<%= pizza.name %> - <%= pizza.ingredients_list %>
 		</a>
 	</li>
   <% end %>
 </ul>
 <a href="/fruits/new">Add new fruit</a>
-
-

@@ -2,6 +2,7 @@ defmodule Pluggy.Router do
   use Plug.Router
   use Plug.Debugger
 
+  alias Pluggy.Pizza
   alias Pluggy.FruitController
   alias Pluggy.UserController
 

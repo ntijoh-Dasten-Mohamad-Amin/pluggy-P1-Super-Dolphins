@@ -2,7 +2,7 @@ defmodule Index.Controller do
 
   require IEx
 
-  alias Pluggy.Fruit
+  alias Pluggy.Pizza
   alias Pluggy.User
   import Pluggy.Template, only: [render: 2]
   import Plug.Conn, only: [send_resp: 3]
@@ -17,7 +17,7 @@ def index(conn) do
         _ -> User.get(session_user)
       end
 
-    send_resp(conn, 200, render("frontpage/index", fruits: Fruit.all(), user: current_user))
+    send_resp(conn, 200, render("frontpage/index", pizza: Pizza.all(), user: current_user))
   end
 
 end

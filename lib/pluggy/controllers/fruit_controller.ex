@@ -1,7 +1,7 @@
 defmodule Pluggy.FruitController do
   require IEx
 
-  alias Pluggy.Fruit
+  alias Pluggy.Pizza
   alias Pluggy.User
   import Pluggy.Template, only: [render: 2]
   import Plug.Conn, only: [send_resp: 3]
@@ -16,16 +16,16 @@ defmodule Pluggy.FruitController do
         _ -> User.get(session_user)
       end
 
-    send_resp(conn, 200, render("fruits/index", fruits: Fruit.all(), user: current_user))
+    send_resp(conn, 200, render("fruits/index", pizza: Pizza.all(), user: current_user))
   end
 
   #render använder eex
   def new(conn), do: send_resp(conn, 200, render("fruits/new", []))
-  def show(conn, id), do: send_resp(conn, 200, render("fruits/show", fruit: Fruit.get(id)))
-  def edit(conn, id), do: send_resp(conn, 200, render("fruits/edit", fruit: Fruit.get(id)))
+  def show(conn, id), do: send_resp(conn, 200, render("fruits/show", pizza: Pizza.get(id)))
+  def edit(conn, id), do: send_resp(conn, 200, render("fruits/edit", pizza: Pizza.get(id)))
 
   def create(conn, params) do
-    Fruit.create(params)
+    Pizza.create(params)
     case params["file"] do
       nil -> IO.puts("No file uploaded")  #do nothing
         # move uploaded file from tmp-folder
@@ -35,16 +35,16 @@ defmodule Pluggy.FruitController do
   end
 
   def update(conn, id, params) do
-    Fruit.update(id, params)
+    Pizza.update(id, params)
     redirect(conn, "/fruits")
   end
 
   def destroy(conn, id) do
-    Fruit.delete(id)
+    Pizza.delete(id)
     redirect(conn, "/fruits")
   end
 
   defp redirect(conn, url) do
-    Plug.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")
+    Pizza.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")
   end
 end
