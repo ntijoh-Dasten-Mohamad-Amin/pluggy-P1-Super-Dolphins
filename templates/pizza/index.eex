@@ -1,4 +1,4 @@
-<h1>Fruits.index (/fruits)</h1>
+<h1>pizza.index (/pizza)</h1>
 
 <%= if user do %>
 	<form action="/users/logout" method="post">
@@ -20,10 +20,10 @@
 <ul>
   <%= for pizza <- pizza do %>
     <li>
-    	<a href="/fruits/<%= pizza.id %>">
-			<%= pizza.name %> - <%= pizza.ingredients_list %>
+    	<a href="/pizza/<%= pizza.id %>">
+			<%= pizza.name %>
 		</a>
 	</li>
   <% end %>
 </ul>
-<a href="/fruits/new">Add new fruit</a>
+<a href="/pizza/new">Add new pizza</a>

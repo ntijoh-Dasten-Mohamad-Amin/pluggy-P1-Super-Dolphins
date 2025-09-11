@@ -1,8 +1,0 @@
-<h1>Fruits.show (/fruits/<%= pizza.id %>)</h1>
-
-<h2>
-	<a href="/fruits/<%= pizza.id %>/edit"><%= pizza.name %></a>
-	<form action="/fruits/<%= pizza.id %>/destroy" method="post">
-		<button type="submit">Destroy pizza</button>
-	</form>
-</h2>

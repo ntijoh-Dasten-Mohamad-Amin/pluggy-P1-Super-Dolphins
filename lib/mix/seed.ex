@@ -31,14 +31,14 @@ defmodule Mix.Tasks.Seed do
 
     Postgrex.query!(
       DB,
-      "Create TABLE PidCompare (P_id VARCHAR(255) NOT NULL, Ing_id VARCHAR(255) NOT NULL)",
+      "Create TABLE PidCompare (P_id INTEGER NOT NULL, Ing_id INTEGER NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )
 
     Postgrex.query!(
       DB,
-      "Create TABLE orders (id SERIAL, id_p INTEGER, name VARCHAR(255) NOT NULL, state BOOLEAN NOT NULL, )",
+      "Create TABLE orders (id SERIAL, id_p INTEGER, name VARCHAR(255) NOT NULL, state BOOLEAN NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )
@@ -168,49 +168,65 @@ defmodule Mix.Tasks.Seed do
       ($57, $58),
       ($59, $60),
       ($61, $62),
-      ($63, $64)
+      ($63, $64),
+      ($65, $66)
 
 
     """, [
 
-    "1", "1",
-    "1", "2",
-    "1", "3",
-    "2", "1",
-    "2", "2",
-    "2", "4",
-    "2", "5",
-    "2", "6",
-    "3", "1",
-    "4", "2",
-    "4", "7",
-    "4", "8",
-    "4", "9",
-    "5", "1",
-    "5", "2",
-    "5", "4",
-    "5", "5",
-    "6", "1",
-    "6", "2",
-    "6", "10",
-    "6", "11",
-    "6", "12",
-    "7", "1",
-    "7", "2",
-    "7", "4",
-    "7", "5",
-    "7", "6",
-    "7", "13",
-    "8", "1",
-    "8", "2",
-    "8", "14",
-    "8", "10",
-    "8", "15"
+    1, 1,
+    1, 2,
+    1, 3,
+    2, 1,
+    2, 2,
+    2, 4,
+    2, 5,
+    2, 6,
+    3, 1,
+    4, 2,
+    4, 7,
+    4, 8,
+    4, 9,
+    5, 1,
+    5, 2,
+    5, 4,
+    5, 5,
+    6, 1,
+    6, 2,
+    6, 10,
+    6, 11,
+    6, 12,
+    7, 1,
+    7, 2,
+    7, 4,
+    7, 5,
+    7, 6,
+    7, 13,
+    8, 1,
+    8, 2,
+    8, 14,
+    8, 10,
+    8, 15
 
     ],
       pool: DBConnection.ConnectionPool
     )
 
+
+    Postgrex.query!(DB, """
+    INSERT INTO orders (id_p,name,state)
+    VALUES
+      ($1,$2,$3),
+      ($4,$5,$6)
+
+    """, [
+    1, "Margherita", false,
+    2, "Capricciosa", false
+
+
+    ],
+      pool: DBConnection.ConnectionPool
+    )
 
   end
 end

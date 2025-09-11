@@ -1,5 +1,5 @@
 defmodule Pluggy.Pizza do
-  defstruct(id: nil, name: "", ingredients_list: [])
+  defstruct(id: nil, name: "")
 
   alias Pluggy.Pizza
 
@@ -14,34 +14,15 @@ defmodule Pluggy.Pizza do
     |> to_struct
   end
 
-  def update(id, params) do
-    name = params["name"]
-    ingredients_list = String.to_integer(params["ingredients_list"])
-    id = String.to_integer(id)
-
-    Postgrex.query!(
-      DB,
-      "UPDATE pizza SET name = $1, ingredients_list = $2 WHERE id = $3",
-      [name, ingredients_list, id]
-    )
-  end
-
-  def create(params) do
-    name = params["name"]
-    ingredients_list = String.to_integer(params["ingredients_list"])
-
-    Postgrex.query!(DB, "INSERT INTO pizza (name, ingredients_list) VALUES ($1, $2)", [name, ingredients_list])
-  end
-
   def delete(id) do
     Postgrex.query!(DB, "DELETE FROM pizza WHERE id = $1", [String.to_integer(id)])
   end
 
-  def to_struct([[id, name, ingredients_list]]) do
-    %Pizza{id: id, name: name, ingredients_list: ingredients_list}
+  def to_struct([[id, name]]) do
+    %Pizza{id: id, name: name}
   end
 
   def to_struct_list(rows) do
-    for [id, name, ingredients_list] <- rows, do: %Pizza{id: id, name: name, ingredients_list: ingredients_list}
+    for [id, name] <- rows, do: %Pizza{id: id, name: name}
   end
 end

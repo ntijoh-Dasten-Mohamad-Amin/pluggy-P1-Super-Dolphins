@@ -16,13 +16,13 @@ defmodule Pluggy.FruitController do
         _ -> User.get(session_user)
       end
 
-    send_resp(conn, 200, render("fruits/index", pizza: Pizza.all(), user: current_user))
+    send_resp(conn, 200, render("pizza/index", pizza: Pizza.all(), user: current_user))
   end
 
   #render använder eex
-  def new(conn), do: send_resp(conn, 200, render("fruits/new", []))
-  def show(conn, id), do: send_resp(conn, 200, render("fruits/show", pizza: Pizza.get(id)))
-  def edit(conn, id), do: send_resp(conn, 200, render("fruits/edit", pizza: Pizza.get(id)))
+  def new(conn), do: send_resp(conn, 200, render("pizza/new", []))
+  def show(conn, id), do: send_resp(conn, 200, render("pizza/show", pizza: Pizza.get(id)))
+  def edit(conn, id), do: send_resp(conn, 200, render("pizza/edit", pizza: Pizza.get(id)))
 
   def create(conn, params) do
     Pizza.create(params)
@@ -31,17 +31,17 @@ defmodule Pluggy.FruitController do
         # move uploaded file from tmp-folder
       _  -> File.rename(params["file"].path, "priv/static/uploads/#{params["file"].filename}")
     end
-    redirect(conn, "/fruits")
+    redirect(conn, "/pizza")
   end
 
   def update(conn, id, params) do
     Pizza.update(id, params)
-    redirect(conn, "/fruits")
+    redirect(conn, "/pizza")
   end
 
   def destroy(conn, id) do
     Pizza.delete(id)
-    redirect(conn, "/fruits")
+    redirect(conn, "/pizza")
   end
 
   defp redirect(conn, url) do
