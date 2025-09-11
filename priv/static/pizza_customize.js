@@ -1,8 +1,12 @@
 
 
 function pizza_check(button, modal) {
+    const modal_body = modal.querySelector(".modal-body")
     switch(button.id) {
         case "Margherita":
+                document.getElementById("inlineCheckbox1").parentElement.children[0].checked = true;
+                document.getElementById("inlineCheckbox2").parentElement.children[0].checked = true;
+                document.getElementById("inlineCheckbox3").parentElement.children[0].checked = true;
                 //ta fram modal inline-input genom children från button id och fore-check:a dom när man klickar på knappen
             break;
         case "Capricciosa":
