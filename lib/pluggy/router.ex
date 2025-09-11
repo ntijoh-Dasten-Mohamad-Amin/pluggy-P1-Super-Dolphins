@@ -3,6 +3,7 @@ defmodule Pluggy.Router do
   use Plug.Debugger
 
   alias Pluggy.Pizza
+  alias Pluggy.Orders
   alias Pluggy.FruitController
   alias Pluggy.UserController
   alias Pluggy.OrdersController
@@ -26,15 +27,16 @@ defmodule Pluggy.Router do
   get("/", do: Index.Controller.index(conn))
   get("/orders", do: OrdersController.orders(conn))
   get("/pizza", do: FruitController.index(conn))
+  get("/kundkorg", do: KundController.index(conn))
   #get("/pizza/new", do: FruitController.new(conn))
   get("/orders/:id", do: OrdersController.show(conn, id))
   get("/pizza/:id", do: FruitController.show(conn, id))
-  #get("/pizza/:id/edit", do: FruitController.edit(conn, id))
+  post("/orders/:id/edit", do: OrdersController.update(conn, id))
 
   post("/pizza", do: FruitController.create(conn, conn.body_params))
 
   # should be put /fruits/:id, but put/patch/delete are not supported without hidden inputs
-  post("/piza/:id/edit", do: FruitController.update(conn, id, conn.body_params))
+  post("/pizza/:id/edit", do: FruitController.update(conn, id, conn.body_params))
 
   # should be delete /fruits/:id, but put/patch/delete are not supported without hidden inputs
   post("/pizza/:id/destroy", do: FruitController.destroy(conn, id))

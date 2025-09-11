@@ -53,7 +53,7 @@ defmodule Mix.Tasks.Seed do
 
     Postgrex.query!(
       DB,
-      "Create TABLE completed (id SERIAL, id_p INTEGER, name VARCHAR(255) NOT NULL)",
+      "Create TABLE completed (id SERIAL, id_p INTEGER, name VARCHAR(255), state BOOLEAN NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )

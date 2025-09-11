@@ -1,10 +1,43 @@
-<h1>Orders.show (/orders/<%= orders.id %>)</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tony's pizza</title>
+    <link rel="stylesheet" type="text/css" href="/tonypizza.css">
+</head>
 
-<h2>
-	<form action="/orders/<%= orders.id %>/destroy" method="post">
-		<button type="submit">Destroy pizza</button>
-	</form>
-</h2>
+
+<body>
 
 
-<p>Order nummer <%= orders.id %>, det är pizza <%= orders.p_id %> vilket också är <%= orders.name %></p>
+<h1>All Orders</h1>
+	<%= for order <- orders do %>
+	<div class="order_holder">
+	<li class="order_holder_text">
+		Order ID: <%= order.id %><br>
+		Pizza ID: <%= order.id_p %><br>
+		Name: <%= order.name %><br>
+		State: <%= order.state %><br>
+		<form action="/orders/<%= order.id %>/edit"> <input type="submit" value"submit"></form>
+		<button class="knapp1" type="button">Done</button>
+		<button class="knapp2" type="button">Delivered</button>
+	</li>
+	</div>
+	<% end %>
+
+	<h2>Finished Orders</h2>
+	<%= for order <- orders do %>
+	<div class="order_holder">
+	<li class="order_holder_text">
+		Order ID: <%= order.id %><br>
+		Pizza ID: <%= order.id_p %><br>
+		Name: <%= order.name %><br>
+		State: <%= order.state %><br>
+		<button class="knapp3" type="button">Destroy!!!</button>
+	</li>
+	</div>
+	<% end %>
+
+</body>
+</html>
