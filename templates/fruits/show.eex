@@ -6,5 +6,3 @@
 		<button type="submit">Destroy pizza</button>
 	</form>
 </h2>
-
-<p>Ingredients list: <%= Enum.join(pizza.ingredients_list, ", ") %></p>
