@@ -13,7 +13,7 @@ defmodule Mix.Tasks.Seed do
     IO.puts("Dropping tables")
 
     Postgrex.query!(DB, "DROP TABLE IF EXISTS pizza", [], pool: DBConnection.ConnectionPool)
-    Postgrex.query!(DB, "DROP TABLE IF EXISTS PidCompare", [], pool: DBConnection.ConnectionPool)
+    Postgrex.query!(DB, "DROP TABLE IF EXISTS pizza_recipes", [], pool: DBConnection.ConnectionPool)
     Postgrex.query!(DB, "DROP TABLE IF EXISTS completed", [], pool: DBConnection.ConnectionPool)
     Postgrex.query!(DB, "DROP TABLE IF EXISTS ingredients", [], pool: DBConnection.ConnectionPool)
     Postgrex.query!(DB, "DROP TABLE IF EXISTS orders", [], pool: DBConnection.ConnectionPool)
@@ -31,7 +31,7 @@ defmodule Mix.Tasks.Seed do
 
     Postgrex.query!(
       DB,
-      "Create TABLE PidCompare (P_id INTEGER NOT NULL, Ing_id INTEGER NOT NULL)",
+      "Create TABLE pizza_recipes (pizza_id INTEGER NOT NULL, ingredient_id INTEGER NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )
@@ -134,7 +134,7 @@ defmodule Mix.Tasks.Seed do
     )
 
     Postgrex.query!(DB, """
-    INSERT INTO PidCompare (P_id, Ing_id)
+    INSERT INTO pizza_recipes (pizza_id, ingredient_id)
     VALUES
 
       ($1, $2),

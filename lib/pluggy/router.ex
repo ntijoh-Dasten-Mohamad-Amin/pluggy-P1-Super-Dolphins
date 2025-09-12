@@ -5,6 +5,7 @@ defmodule Pluggy.Router do
   alias Pluggy.Pizza
   alias Pluggy.Orders
   alias Pluggy.FruitController
+  alias Pluggy.PizzaController
   alias Pluggy.UserController
   alias Pluggy.OrdersController
 
@@ -26,7 +27,10 @@ defmodule Pluggy.Router do
 
   get("/", do: Index.Controller.index(conn))
   get("/orders", do: OrdersController.orders(conn))
-  get("/pizza", do: FruitController.index(conn))
+
+  get("/pizza", do: PizzaController.index(conn))
+
+
   get("/kundkorg", do: KundController.index(conn))
   #get("/pizza/new", do: FruitController.new(conn))
   get("/orders/:id", do: OrdersController.show(conn, id))

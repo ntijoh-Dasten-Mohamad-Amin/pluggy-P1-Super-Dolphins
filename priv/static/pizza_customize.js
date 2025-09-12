@@ -4,6 +4,7 @@ function pizza_check(button, modal) {
     for (let index = 1; index <= 15; index++) {document.getElementById("inlineCheckbox" + index).parentElement.children[0].checked = false;}
 
     const modal_body = modal.querySelector(".modal-body")
+    
     switch(button.id) {
         case "Margherita":
                 document.getElementById("inlineCheckbox1").parentElement.children[0].checked = true;
@@ -87,5 +88,6 @@ function cart_add(modal) {
     gluten = document.getElementById("glute_check").checked
     
     pizza = [title, gluten, size, ingredients]
-    window.localStorage.setItem()
+    console.log(pizza)
+    //window.localStorage.setItem()
 }
