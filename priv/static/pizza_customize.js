@@ -88,6 +88,10 @@ function cart_add(modal) {
     gluten = document.getElementById("glute_check").checked
     
     pizza = [title, gluten, size, ingredients]
-    console.log(pizza)
-    //window.localStorage.setItem()
+    
+    let index = 0;
+    for (index = 0; window.localStorage.getItem(index) != null; ++index) {}
+    window.localStorage.setItem(index,pizza);
+
+    console.log(localStorage)
 }

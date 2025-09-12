@@ -196,7 +196,7 @@
                                         </div>
                                         <div class="modal-footer">
                                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
-                                            <button type="button" class="btn btn-primary" onclick="cart_add(pizza_modal)">Lägg i kundkorg</button>
+                                            <button type="button" class="btn btn-primary" onclick="cart_add(pizza_modal)" data-dismiss="modal">Lägg i kundkorg</button>
                                         </div>
                                     </div>
                                 </div>
