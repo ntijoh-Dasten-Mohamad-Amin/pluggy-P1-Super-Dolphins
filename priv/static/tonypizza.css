@@ -83,10 +83,14 @@ body {
 
 .pizza_text button:nth-child(3) {
     background-color: antiquewhite;
+    color: black;
+    padding: 2px 8px;
 }
 
 .pizza_text button:nth-child(4) {
     background-color: rgb(0, 205, 0);
+    color: black;
+    padding: 2px 8px;
 }
 
 .pizza img {

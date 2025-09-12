@@ -25,9 +25,9 @@
                     <div class="pizza_text">
                         <p> <b>Margherita</b></p>
                         <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Basilika</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Margherita">ANPASSA </button>
+                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Margherita">Anpassa </button>
 
-                        <button type="button">Köp</button>
+                        <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_2" class="pizza">
@@ -35,8 +35,8 @@
                     <div class="pizza_text">
                         <p> <b>Marinara</b></p>
                         <p class="pizza_ingredients"> Tomatsås</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Marinara">ANPASSA </button>
-                        <button type="button">Köp</button>
+                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Marinara">Anpassa </button>
+                        <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_3" class="pizza">
@@ -44,17 +44,17 @@
                         <div class="pizza_text">
                             <p> <b>Prosciutto e funghi</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp</p>
-                            <button type="button">Anpassa</button>
-                            <button type="button">Köp</button>
+                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Prosciutto e funghi">Anpassa </button>
+                            <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_4" class="pizza">
                     <img src="uploads/Grafiskt material/quattro-stagioni.svg"></img>
                     <div class="pizza_text">
-                        <p class="pizza_ingredients"> <b>Quattro stagioni</b></p>
-                        <p> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp <br> Kronärtskocka <br> Oliver</p>
-                        <button type="button">Anpassa</button>
-                        <button type="button">Köp</button>
+                        <p> <b>Quattro stagioni</b></p>
+                        <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp <br> Kronärtskocka <br> Oliver</p>
+                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro stagioni">Anpassa </button>
+                        <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
 
@@ -63,8 +63,8 @@
                         <div class="pizza_text">
                             <p> <b>Capricciosa</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozarella <br> Skinka <br> Svamp <br> Kronärtskocka</p>
-                            <button type="button">Anpassa</button>
-                            <button type="button">Köp</button>
+                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Capricciosa">Anpassa </button>
+                            <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
 
@@ -73,8 +73,8 @@
                         <div class="pizza_text">
                             <p> <b>Quattro formaggi</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Parmesan <br> Pecorino <br> Gorgonzola</p>
-                            <button type="button">Anpassa</button>
-                            <button type="button">Köp</button>
+                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro formaggi">Anpassa </button>
+                            <button type="button" class="btn btn-primary">Köp</button>
                     </div>
 
                 </div>
@@ -84,8 +84,8 @@
                         <div class="pizza_text">
                             <p> <b>Ortolana</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Paprika <br> Aubergine <br> Zucchini</p>
-                            <button type="button">Anpassa</button>
-                            <button type="button">Köp</button>
+                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Ortolana">Anpassa </button>
+                            <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
 
@@ -94,8 +94,8 @@
                     <div class="pizza_text">
                         <p> <b>Diavola</b></p>
                         <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Salami <br> Paprika <br> Chili</p>
-                        <button type="button">Anpassa</button>
-                        <button type="button">Köp</button>
+                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Diavola">Anpassa </button>
+                        <button type="button" class="btn btn-primary">Köp</button>
                     </div>
                 </div>
     </div>
@@ -105,12 +105,11 @@
                                     <div class="modal-content" id="pizza_modal">
                                         <div class="modal-header">
                                             <h5 class="modal-title" id="exampleModalLongTitle"></h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                         </div>
                                         <div class="modal-body">
-
+                                        Allergier:
                                         <div class="form-check">
-                                            <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                            <input class="form-check-input" type="checkbox" value="" id="glute_check">
                                             <label class="form-check-label" for="defaultCheck1">
                                                 Glutenfri
                                             </label>
@@ -133,75 +132,75 @@
                                         Ingredienser:
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="1">
                                             <label class="form-check-label" for="inlineCheckbox1">Tomatsås</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option2">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="2">
                                             <label class="form-check-label" for="inlineCheckbox1">Mozzarella</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option3">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="3">
                                             <label class="form-check-label" for="inlineCheckbox1">Basilika</label>
                                         </div>
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option4">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox4" value="4">
                                             <label class="form-check-label" for="inlineCheckbox1">Skinka</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option5">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox5" value="5">
                                             <label class="form-check-label" for="inlineCheckbox1">Svamp</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option6">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox6" value="6">
                                             <label class="form-check-label" for="inlineCheckbox1">Kronärtskocka</label>
                                         </div>
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option7">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox7" value="7">
                                             <label class="form-check-label" for="inlineCheckbox1">Parmesan</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option8">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox8" value="8">
                                             <label class="form-check-label" for="inlineCheckbox1">Pecorino</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option9">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox9" value="9">
                                             <label class="form-check-label" for="inlineCheckbox1">Gorgonzola</label>
                                         </div>
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option10">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox10" value="10">
                                             <label class="form-check-label" for="inlineCheckbox1">Paprika</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option11">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox11" value="11">
                                             <label class="form-check-label" for="inlineCheckbox1">Aubergine</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option12">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox12" value="12">
                                             <label class="form-check-label" for="inlineCheckbox1">Zucchini</label>
                                         </div>
                                         <br>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option13">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox13" value="13">
                                             <label class="form-check-label" for="inlineCheckbox1">Oliver</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option14">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox14" value="14">
                                             <label class="form-check-label" for="inlineCheckbox1">Salami</label>
                                         </div>
                                         <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option15">
+                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox15" value="15">
                                             <label class="form-check-label" for="inlineCheckbox1">Chili</label>
                                         </div>
 
 
                                         </div>
                                         <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <button type="button" class="btn btn-primary">Save changes</button>
+                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Stäng</button>
+                                            <button type="button" class="btn btn-primary" onclick="cart_add(pizza_modal)">Lägg i kundkorg</button>
                                         </div>
                                     </div>
                                 </div>
