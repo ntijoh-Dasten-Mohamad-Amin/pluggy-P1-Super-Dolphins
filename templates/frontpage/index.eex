@@ -15,7 +15,9 @@
 
 
     <div id="kundkorg" class="Basket_logo">
-        <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
+        <a href="kundvagn">
+            <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
+        </a>
     </div>
 
                 <div id="pizza_1" class="pizza">

@@ -8,6 +8,7 @@ defmodule Pluggy.OrdersController do
   import Pluggy.Template, only: [render: 2]
   import Plug.Conn, only: [send_resp: 3]
 
+@spec orders(Plug.Conn.t()) :: Plug.Conn.t()
 def orders(conn) do
     # get user if logged in
     session_user = conn.private.plug_session["user_id"]
@@ -18,7 +19,10 @@ def orders(conn) do
         _ -> User.get(session_user)
       end
 
-    send_resp(conn, 200, render("orders/orderpanel", orders: Orders.all(), user: current_user))
+
+    orders = Orders.all()
+    completed = Orders.all_completed()
+    send_resp(conn, 200, render("orders/orderpanel", orders: orders, completed: completed, user: current_user))
   end
 
   @spec show(Plug.Conn.t(), binary()) :: Plug.Conn.t()
@@ -30,9 +34,13 @@ def orders(conn) do
     redirect(conn, "/orders")
   end
 
+  def destroy(conn, id) do
+    Orders.delete(id)
+    redirect(conn, "/orders")
+  end
+
 
   defp redirect(conn, url) do
-    Orders.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")
+    Plug.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")
   end
 end
-
