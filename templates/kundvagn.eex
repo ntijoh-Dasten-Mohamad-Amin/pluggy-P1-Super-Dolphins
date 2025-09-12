@@ -27,7 +27,8 @@
             </form>
         </div>
     </div>
+    <button type="button" onclick="test()"></button>
 
-
+    <script src="pizza_korg.js"></script>
 </body>
 </html>
