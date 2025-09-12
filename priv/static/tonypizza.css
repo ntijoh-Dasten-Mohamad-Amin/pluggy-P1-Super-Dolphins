@@ -114,10 +114,45 @@ body {
 
 
 .order_holder {
-    border-style: solid;
-    border-radius: 2px;
+    border-style: dashed;
+    border-radius: 10px;
     border-color: black;
     margin: 10px;
+    width: fit-content;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.kundvagn_holder {
+    border-style: dashed;
+    border-radius: 10px;
+    border-color: black;
+    margin: 10px;
+    width: fit-content;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.shopping_text {
+    text-decoration: none;
+}
+
+.kund_text {
+    margin: 20px;
+}
+
+
+.All_orders {
+    display: grid;
+    border-style: groove;
+    border-radius: 2px;
+    border-color: rgb(66, 66, 78);
+    width: 25%;
+    margin: 30px;
+    justify-items: center;
+
 }
 
 .order_holder_text {
@@ -125,7 +160,7 @@ body {
 }
 
 .knapp1 {
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(74, 249, 252);
     margin: 10px;
     cursor: pointer;
 }
@@ -137,7 +172,7 @@ body {
 }
 
 .knapp3 {
-    background: red;
+    background: rgb(99, 255, 117);
     margin: 10px;
     cursor: pointer;
 }

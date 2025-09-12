@@ -10,14 +10,16 @@
 
 <body>
 
-
+<div class="All_orders">
 <h1>All Orders</h1>
 	<%= for order <- orders do %>
 	<div class="order_holder">
 	<li class="order_holder_text">
 		Order ID: <%= order.id %><br>
-		Pizza ID: <%= order.id_p %><br>
+		Person: Insert random name<br>
 		Name: <%= order.name %><br>
+		Pizza ID: <%= order.id_p %><br>
+		Ingredients: Give the names of ingredients<br>
 		<form action="/orders/<%= order.id %>/edit" method="POST"> <button class="knapp1" type="submit">Done</button>
 		  	<input type="hidden" name="name" value="<%= order.name %>">
   			<input type="hidden" name="id_p" value="<%= order.id_p %>">
@@ -25,14 +27,19 @@
 	</li>
 	</div>
 	<% end %>
+</div>
 
+
+<div class="All_orders">
 	<h2>Finished Orders</h2>
 	<%= for comp <- completed do %>
 	<div class="order_holder">
 	<li class="order_holder_text">
 		Order ID: <%= comp.id %><br>
-		Pizza ID: <%= comp.id_p %><br>
+		Person: Insert random name<br>
 		Name: <%= comp.name %><br>
+		Pizza ID: <%= comp.id_p %><br>
+		Ingredients: Give names of ingredients<br>
 
 	<form action="/orders/<%= comp.id %>/destroy" method="POST">
 		<button class="knapp3" type="submit">Delivered</button>
@@ -40,6 +47,6 @@
 	</li>
 	</div>
 	<% end %>
-
+</div>
 </body>
 </html>
