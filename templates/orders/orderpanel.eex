@@ -18,23 +18,25 @@
 		Order ID: <%= order.id %><br>
 		Pizza ID: <%= order.id_p %><br>
 		Name: <%= order.name %><br>
-		State: <%= order.state %><br>
-		<form action="/orders/<%= order.id %>/edit"> <input type="submit" value"submit"></form>
-		<button class="knapp1" type="button">Done</button>
-		<button class="knapp2" type="button">Delivered</button>
+		<form action="/orders/<%= order.id %>/edit" method="POST"> <button class="knapp1" type="submit">Done</button>
+		  	<input type="hidden" name="name" value="<%= order.name %>">
+  			<input type="hidden" name="id_p" value="<%= order.id_p %>">
+		</form>
 	</li>
 	</div>
 	<% end %>
 
 	<h2>Finished Orders</h2>
-	<%= for order <- orders do %>
+	<%= for comp <- completed do %>
 	<div class="order_holder">
 	<li class="order_holder_text">
-		Order ID: <%= order.id %><br>
-		Pizza ID: <%= order.id_p %><br>
-		Name: <%= order.name %><br>
-		State: <%= order.state %><br>
-		<button class="knapp3" type="button">Destroy!!!</button>
+		Order ID: <%= comp.id %><br>
+		Pizza ID: <%= comp.id_p %><br>
+		Name: <%= comp.name %><br>
+
+	<form action="/orders/<%= comp.id %>/destroy" method="POST">
+		<button class="knapp3" type="submit">Delivered</button>
+	</form>
 	</li>
 	</div>
 	<% end %>

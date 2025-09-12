@@ -35,7 +35,8 @@ defmodule Pluggy.Router do
   #get("/pizza/new", do: FruitController.new(conn))
   get("/orders/:id", do: OrdersController.show(conn, id))
   get("/pizza/:id", do: FruitController.show(conn, id))
-  post("/orders/:id/edit", do: OrdersController.update(conn, id))
+  get("/kundvagn", do: KundvagnController.index(conn))
+  post("/orders/:id/edit", do: OrdersController.update(conn,id,conn.body_params))
 
   post("/pizza", do: FruitController.create(conn, conn.body_params))
 
@@ -43,7 +44,7 @@ defmodule Pluggy.Router do
   post("/pizza/:id/edit", do: FruitController.update(conn, id, conn.body_params))
 
   # should be delete /fruits/:id, but put/patch/delete are not supported without hidden inputs
-  post("/pizza/:id/destroy", do: FruitController.destroy(conn, id))
+  post("/orders/:id/destroy", do: OrdersController.destroy(conn, id))
 
   post("/users/login", do: UserController.login(conn, conn.body_params))
   post("/users/logout", do: UserController.logout(conn))
