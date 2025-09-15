@@ -12,21 +12,23 @@
     <h1> SHOPPING CART </h1>
     </a>
 
+
     Your order is the following: <br>
     <br>
     <div class="kundvagn_holder">
-        <div class="kund_text">
-        Pizza: INSERT NAME<br>
-        Ingredients: INSERT NAME<br>
-            <form action="kundvagn/send" method="POST">
-                INSERT NAME BELOW<br>
+        <div class="kund_text" id="kund_text">
+        <h5>Pizza: INSERT NAME<br></h5>
+        <h6>Ingredients: INSERT NAME</h6>
+            <form action="/kundvagn/send" method="POST">
+                <h6>INSERT NAME BELOW<br></h6>
                 <input type="text"><br>
                 <input type="hidden" name="list" value="information">
                 <button class="knapp1" type="submit">Buy</button><br>
             </form>
         </div>
     </div>
+    <button type="button" onclick="test()"></button>
 
-
+    <script src="pizza_korg.js"></script>
 </body>
 </html>
