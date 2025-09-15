@@ -1,28 +1,41 @@
 function test() {
     // RemoveIndex = localStorage[PizzaOrderNr]
-    console.log(localStorage)
-    let result;
-    for (let index = 0; index < localStorage.length - 1; index++) {
-        text = localStorage.getItem[index]
-        result = text.split(",");
+    let result = [];
+
+    for (let i = 0; i < localStorage.length; i++) {
+        let text = localStorage.getItem(localStorage.key(i));
+
+  // split into lines
+        let parts = text.split("\n");
+
+  // process each part
+        let formatted = parts.map(line => {
+    // if the line contains only digits (or commas after split), group with commas
+            let items = line.split(/\s+/).filter(Boolean); // split by whitespace
+            if (items.every(v => /^\d+$/.test(v))) {
+                return items.join(","); // join numbers with commas
+            }
+            return line; // keep strings as-is
+        });
+
+    result.push(...formatted); // flatten into result
     }
 
 
-    console.log(result)
-    console.log(text)
-
-
-    document.getElementById(kund_text).children[0].innerHTML = result[0]
-    document.getElementById(kund_text).children[1].innerHTML = result[4] + result[5] + result[6]
-
-
-
-
+    
+    let finalString = result.join("\n");
+    console.log(finalString);
+    document.getElementById("hidden-input").value = finalString
+    // console.log(document.getElementById("hidden-input").value = result);
 }
-const kundvagn_holder = document.getElementsByClassName("kundvagn_holder")
+
+function test2(){
+    localStorage.clear()
+}
+//const kundvagn_holder = document.getElementsByClassName("kundvagn_holder")
 
 function removepizza() {
-    // localStorage.removeItem(RemoveIndex)
+    // localStorage.clear()
 
 }
 
