@@ -62,6 +62,7 @@ function pizza_check(button, modal) {
             document.getElementById("inlineCheckbox14").parentElement.children[0].checked = true;
             document.getElementById("inlineCheckbox10").parentElement.children[0].checked = true;
             document.getElementById("inlineCheckbox15").parentElement.children[0].checked = true;
+
             break;
     }
     modal.querySelector(".modal-header").querySelector(".modal-title").innerHTML = button.id;

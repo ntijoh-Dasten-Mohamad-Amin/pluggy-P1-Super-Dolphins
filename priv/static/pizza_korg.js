@@ -1,4 +1,4 @@
-function test() {
+function add_pizzas() {
     // RemoveIndex = localStorage[PizzaOrderNr]
     let result = [];
 
@@ -22,7 +22,7 @@ function test() {
     }
 
 
-    
+
     let finalString = result.join("\n");
     console.log(finalString);
     document.getElementById("hidden-input").value = finalString

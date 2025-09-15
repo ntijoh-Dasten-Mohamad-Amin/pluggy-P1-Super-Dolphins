@@ -38,15 +38,19 @@ body {
 #pizza_4 {
     grid-area: div4;
 }
+
 #pizza_5 {
     grid-area: div5;
 }
+
 #pizza_6 {
     grid-area: div6;
 }
+
 #pizza_7 {
     grid-area: div7;
 }
+
 #pizza_8 {
     grid-area: div8;
 }
@@ -67,7 +71,6 @@ body {
     margin: 1px;
     width: 100px;
     height: 100px;
-
 
 }
 
@@ -159,6 +162,13 @@ body {
     margin: 20px;
 }
 
+
+.buttons {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
 .knapp1 {
     background-color: rgb(74, 249, 252);
     margin: 10px;
@@ -178,14 +188,12 @@ body {
 }
 
 .knapp1:active{
-    background:rgb(9, 255, 0);
     color: blue;
     width: 100px;
 }
 
 
 .knapp1:focus{
-    background:rgb(9, 255, 0);
     color: blue;
     width: 100px;
 }

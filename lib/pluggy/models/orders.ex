@@ -1,5 +1,5 @@
 defmodule Pluggy.Orders do
-  defstruct(id: nil, id_p: nil, name: "")
+  defstruct(id: nil, name: "", gluten: false, size: "", ingredients: [])
 
   alias Pluggy.Orders
   alias Pluggy.OrdersController
@@ -25,33 +25,30 @@ defmodule Pluggy.Orders do
   end
 
   def update(id, params) do
+    gluten =
+    case params["gluten"] do
+      "true" -> true
+      "false" -> false
+      _ -> false
+    end
     name = params["name"]
-    id_p = String.to_integer(params["id_p"])
+    size = params["size"]
+    ingredients = params["ingredients"]
     id = String.to_integer(id)
-    Postgrex.query!(DB,"INSERT INTO completed (name,id_p) VALUES ($1,$2)",
-    [name,id_p])
+    Postgrex.query!(DB,"INSERT INTO completed (name,gluten,size,ingredients) VALUES ($1,$2,$3,$4)",
+    [name,gluten,size,ingredients])
     Postgrex.query!(DB,"DELETE FROM orders WHERE id = $1",
     [id])
   end
 
-  def to_struct([[id, id_p, name]]) do
-    %Orders{id: id, id_p: id_p, name: name}
+
+
+  def to_struct([id, name, gluten, size, ingredients]) do
+    %Orders{id: id, name: name, gluten: gluten, size: size, ingredients: ingredients}
   end
 
 
-  #   def update(id, params) do
-  #   name = params["name"]
-  #   tastiness = String.to_integer(params["tastiness"])
-  #   id = String.to_integer(id)
-
-  #   Postgrex.query!(
-  #     DB,
-  #     "UPDATE fruits SET name = $1, tastiness = $2 WHERE id = $3",
-  #     [name, tastiness, id]
-  #   )
-  # end
-
   def to_struct_list(rows) do
-    for [id, id_p, name] <- rows, do: %Orders{id: id, id_p: id_p, name: name}
+    for [id, name ,gluten,size,ingredients] <- rows, do: %Orders{id: id, name: name, gluten: gluten, size: size, ingredients: ingredients}
   end
 end

@@ -38,7 +38,11 @@ defmodule Mix.Tasks.Seed do
 
     Postgrex.query!(
       DB,
-      "Create TABLE orders (id SERIAL, id_p INTEGER, name VARCHAR(255) NOT NULL)",
+      "Create TABLE orders (id SERIAL,
+      name VARCHAR(255) NOT NULL,
+      gluten BOOLEAN NOT NULL,
+      size VARCHAR(255) NOT NULL,
+      ingredients character[] NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )
@@ -53,7 +57,11 @@ defmodule Mix.Tasks.Seed do
 
     Postgrex.query!(
       DB,
-      "Create TABLE completed (id SERIAL, id_p INTEGER, name VARCHAR(255) NOT NULL)",
+      "Create TABLE completed (id SERIAL,
+      name VARCHAR(255) NOT NULL,
+      gluten BOOLEAN NOT NULL,
+      size VARCHAR(255) NOT NULL,
+      ingredients VARCHAR(255) NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )
@@ -215,20 +223,6 @@ defmodule Mix.Tasks.Seed do
       pool: DBConnection.ConnectionPool
     )
 
-
-    Postgrex.query!(DB, """
-    INSERT INTO orders (id_p,name)
-    VALUES
-      ($1,$2),
-      ($3,$4)
-
-    """, [
-    1, "Margherita",
-    2, "Capricciosa"
-
-    ],
-      pool: DBConnection.ConnectionPool
-    )
 
   end
 end

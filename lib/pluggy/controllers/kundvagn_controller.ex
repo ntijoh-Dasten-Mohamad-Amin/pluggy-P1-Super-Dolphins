@@ -24,10 +24,10 @@ def index(conn) do
 
   def insert(conn,params) do
     Kundvagn.insert(params)
-    redirect(conn, "/Kundvagn")
+    redirect(conn, "/kundvagn")
   end
 
-
+  
 
   defp redirect(conn, url) do
     Plug.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")
