@@ -19,10 +19,10 @@
         <div class="kund_text" id="kund_text">
         <h5>Pizza: INSERT NAME<br></h5>
         <h6>Ingredients: INSERT NAME</h6>
-            <form action="/orders/id/edit" method="POST">
+            <form action="/kundvagn/send" method="POST">
                 <h6>INSERT NAME BELOW<br></h6>
                 <input type="text"><br>
-                <input type="hidden" name="pizzas" value="" id="hidden-input">
+                <input type="hidden" name="list" value="" id="hidden-input">
                 <button class="knapp1" type="submit">Buy</button><br>
             </form>
         </div>
