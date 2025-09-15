@@ -12,14 +12,15 @@
     <h1> SHOPPING CART </h1>
     </a>
 
+
     Your order is the following: <br>
     <br>
     <div class="kundvagn_holder">
-        <div class="kund_text">
-        Pizza: INSERT NAME<br>
-        Ingredients: INSERT NAME<br>
+        <div class="kund_text" id="kund_text">
+        <h5>Pizza: INSERT NAME<br></h5>
+        <h6>Ingredients: INSERT NAME</h6>
             <form action="/orders/id/edit" method="POST">
-                INSERT NAME BELOW<br>
+                <h6>INSERT NAME BELOW<br></h6>
                 <input type="text"><br>
                 <input type="hidden" name="name" value="information">
                 <input type="hidden" name="id_p" value="information">
