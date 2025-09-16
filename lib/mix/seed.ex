@@ -42,7 +42,7 @@ defmodule Mix.Tasks.Seed do
       name VARCHAR(255) NOT NULL,
       gluten BOOLEAN NOT NULL,
       size VARCHAR(255) NOT NULL,
-      ingredients character[] NOT NULL)",
+      ingredients TEXT[] NOT NULL)",
       [],
       pool: DBConnection.ConnectionPool
     )

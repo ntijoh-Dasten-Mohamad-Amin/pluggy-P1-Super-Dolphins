@@ -9,7 +9,6 @@ defmodule Pluggy.Pizza do
     query = "SELECT * FROM pizza JOIN pizza_recipes ON pizza.id = pizza_recipes.pizza_id JOIN ingredients ON pizza_recipes.ingredient_id = ingredients.id"
     grouped = Postgrex.query!(DB, query, []).rows
 
-
     |> Enum.group_by(&Enum.at(&1, 0))
 
     Enum.map(grouped, fn {_id, rows} -> to_struct_list(rows) end )
