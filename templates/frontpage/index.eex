@@ -25,9 +25,8 @@
                     <div class="pizza_text">
                         <p> <b>Margherita</b></p>
                         <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Basilika</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Margherita">Anpassa </button>
-
-                        <button type="button" class="btn btn-primary">Köp</button>
+                        <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Margherita">Anpassa </button>
+                        <button onclick="buy(this)" type="button" class="btn btn-primary" id="Margherita">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_2" class="pizza">
@@ -35,8 +34,8 @@
                     <div class="pizza_text">
                         <p> <b>Marinara</b></p>
                         <p class="pizza_ingredients"> Tomatsås</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Marinara">Anpassa </button>
-                        <button type="button" class="btn btn-primary">Köp</button>
+                        <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Marinara">Anpassa </button>
+                        <button onclick="buy(this)" type="button" class="btn btn-primary" id="Marinara">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_3" class="pizza">
@@ -44,8 +43,8 @@
                         <div class="pizza_text">
                             <p> <b>Prosciutto e funghi</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Prosciutto e funghi">Anpassa </button>
-                            <button type="button" class="btn btn-primary">Köp</button>
+                            <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Prosciutto e funghi">Anpassa </button>
+                            <button onclick="buy(this)" type="button" class="btn btn-primary" id="Prosciutto e funghi">Köp</button>
                     </div>
                 </div>
                 <div id="pizza_4" class="pizza">
@@ -53,8 +52,8 @@
                     <div class="pizza_text">
                         <p> <b>Quattro stagioni</b></p>
                         <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Skinka <br> Svamp <br> Kronärtskocka <br> Oliver</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro stagioni">Anpassa </button>
-                        <button type="button" class="btn btn-primary">Köp</button>
+                        <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro stagioni">Anpassa </button>
+                        <button onclick="buy(this)" type="button" class="btn btn-primary" id="Quattro stagioni">Köp</button>
                     </div>
                 </div>
 
@@ -63,8 +62,8 @@
                         <div class="pizza_text">
                             <p> <b>Capricciosa</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozarella <br> Skinka <br> Svamp <br> Kronärtskocka</p>
-                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Capricciosa">Anpassa </button>
-                            <button type="button" class="btn btn-primary">Köp</button>
+                            <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Capricciosa">Anpassa </button>
+                            <button onclick="buy(this)" type="button" class="btn btn-primary" id="Capricciosa">Köp</button>
                     </div>
                 </div>
 
@@ -73,8 +72,8 @@
                         <div class="pizza_text">
                             <p> <b>Quattro formaggi</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Parmesan <br> Pecorino <br> Gorgonzola</p>
-                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro formaggi">Anpassa </button>
-                            <button type="button" class="btn btn-primary">Köp</button>
+                            <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Quattro formaggi">Anpassa </button>
+                            <button onclick="buy(this)" type="button" class="btn btn-primary" id="Quattro formaggi">Köp</button>
                     </div>
 
                 </div>
@@ -84,8 +83,8 @@
                         <div class="pizza_text">
                             <p> <b>Ortolana</b></p>
                             <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Paprika <br> Aubergine <br> Zucchini</p>
-                            <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Ortolana">Anpassa </button>
-                            <button type="button" class="btn btn-primary">Köp</button>
+                            <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Ortolana">Anpassa </button>
+                            <button onclick="buy(this)" type="button" class="btn btn-primary" id="Ortolana">Köp</button>
                     </div>
                 </div>
 
@@ -94,8 +93,8 @@
                     <div class="pizza_text">
                         <p> <b>Diavola</b></p>
                         <p class="pizza_ingredients"> Tomatsås <br> Mozzarella <br> Salami <br> Paprika <br> Chili</p>
-                        <button onclick="pizza_check(this, pizza_modal)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Diavola">Anpassa </button>
-                        <button type="button" class="btn btn-primary">Köp</button>
+                        <button onclick="pizza_check(this)" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter" id="Diavola">Anpassa </button>
+                        <button onclick="buy(this)" type="button" class="btn btn-primary" id="Diavola">Köp</button>
                     </div>
                 </div>
     </div>

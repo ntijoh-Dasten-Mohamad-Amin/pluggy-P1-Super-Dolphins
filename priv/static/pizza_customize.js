@@ -1,9 +1,9 @@
 
 
-function pizza_check(button, modal) {
+function pizza_check(button) {
     for (let index = 1; index <= 15; index++) {document.getElementById("inlineCheckbox" + index).parentElement.children[0].checked = false;}
 
-    const modal_body = modal.querySelector(".modal-body")
+    const modal_body = document.querySelector(".modal-body")
     
     switch(button.id) {
         case "Margherita":
@@ -65,7 +65,7 @@ function pizza_check(button, modal) {
 
             break;
     }
-    modal.querySelector(".modal-header").querySelector(".modal-title").innerHTML = button.id;
+    document.querySelector(".modal-header").querySelector(".modal-title").innerHTML = button.id;
 }
 
 function cart_add(modal) {
@@ -94,4 +94,10 @@ function cart_add(modal) {
     window.localStorage.setItem(index,pizza);
 
     console.log(localStorage)
+}
+
+function buy(button){
+    modal = document.getElementById("pizza_modal")
+    pizza_check(button)
+    cart_add(modal)
 }
