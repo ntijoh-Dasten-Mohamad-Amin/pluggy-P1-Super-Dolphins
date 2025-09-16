@@ -8,8 +8,7 @@ defmodule Pluggy.Kundvagn do
     |> String.split("\r\n")
     |> Enum.map(&String.split(&1, ","))
     |> from_rows()
-    |> Enum.map()
-    |> IO.inspect()
+    |> Enum.each(&ordering/1)
   end
 
   def from_rows(rows) do
@@ -37,8 +36,7 @@ defmodule Pluggy.Kundvagn do
     |> Enum.reject(&is_nil/1)
   end
 
-  def ordering(struct_list) do
-    struct = hd(struct_list)
+  def ordering(struct) do
     name = struct.name
     gluten = struct.gluten
     size = struct.size

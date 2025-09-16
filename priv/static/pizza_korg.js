@@ -1,3 +1,22 @@
+const template = document.querySelector(".cart_pizza");
+const container = document.querySelector(".cart_container");
+
+for (let index = 0; index < localStorage.length - 1; index++) {
+  const value = localStorage.getItem(index);
+
+  const clone = template.cloneNode(true);
+  clone.querySelector("h4").textContent = value;
+  clone.style.display = "block";
+  clone.querySelector("input").value = index;
+  container.appendChild(clone);
+}
+
+function remove_pizza(button){
+    index = button.parentElement.querySelector("input").value;
+    localStorage.removeItem(index)
+    button.parentElement.remove;
+}
+
 function add_pizzas() {
     // RemoveIndex = localStorage[PizzaOrderNr]
     let result = [];
@@ -20,13 +39,14 @@ function add_pizzas() {
 
     result.push(...formatted); // flatten into result
     }
-
-
-
     let finalString = result.join("\n");
     console.log(finalString);
     document.getElementById("hidden-input").value = finalString
     // console.log(document.getElementById("hidden-input").value = result);
+}
+
+function test(){
+    console.log(localStorage)
 }
 
 function test2(){

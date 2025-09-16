@@ -25,9 +25,17 @@
                 <input type="hidden" name="list" value="" id="hidden-input">
                 <button onclick="add_pizzas()" class="knapp1" type="submit">Buy</button><br>
             </form>
+            <div class="cart_container">
+                <div class="cart_pizza" style="display: none; ">
+                    <h4></h4>
+                    <button class="buttons" type="button" onclick="remove_pizza(this)">X</button>
+                    <input type="hidden" value="">
+                </div>
+            </div>
         </div>
     </div>
-    
+
+    <button class="buttons" type="button" onclick="test()">Remove</button>
     <button class="buttons" type="button" onclick="test2()">Remove</button>
 
     <script src="pizza_korg.js"></script>
