@@ -45,10 +45,7 @@ function add_pizzas() {
     localStorage.clear()
 }
 
-function test(){
-    console.log(localStorage)
-}
-
-function test2(){
+function remove_all(){
     localStorage.clear()
+    location.reload();
 }

@@ -7,36 +7,33 @@
     <link rel="stylesheet" type="text/css" href="/tonypizza.css">
 </head>
 <body>
-
+    <div class="pizza_logo_basket">
     <a class="shopping_text" href="/">
-    <h1> SHOPPING CART </h1>
+        <img src="uploads/Grafiskt material/tonys-pizza-logo.svg"></img>
     </a>
+    </div>
 
 
-    Your order is the following: <br>
-    <br>
     <div class="kundvagn_holder">
         <div class="kund_text" id="kund_text">
-        <h5>Pizza: INSERT NAME<br></h5>
-        <h6>Ingredients: INSERT NAME</h6>
-            <form action="/kundvagn/send" method="POST">
-                <h6>INSERT NAME BELOW<br></h6>
-                <input type="text"><br>
-                <input type="hidden" name="list" value="" id="hidden-input">
-                <button onclick="add_pizzas()" class="knapp1" type="submit">Buy</button><br>
-            </form>
+            <p class="order_text">Your order is the following:</p>
+            <br>
             <div class="cart_container">
                 <div class="cart_pizza" style="display: none; ">
                     <h4></h4>
-                    <button class="buttons" type="button" onclick="remove_pizza(this)">X</button>
+                    <button class="buttons" type="button" onclick="remove_pizza(this)">Remove</button>
                     <input type="hidden" value="">
                 </div>
             </div>
         </div>
     </div>
 
-    <button class="buttons" type="button" onclick="test()">Remove</button>
-    <button class="buttons" type="button" onclick="test2()">Remove</button>
+    <form action="/kundvagn/send" method="POST">
+        <input type="hidden" name="list" value="" id="hidden-input">
+        <button onclick="add_pizzas()" class="buy_button" type="submit">Buy</button>
+        <button class="buttons" type="button" onclick="remove_all()">Remove All</button>
+
+    </form>
 
     <script src="pizza_korg.js"></script>
 </body>

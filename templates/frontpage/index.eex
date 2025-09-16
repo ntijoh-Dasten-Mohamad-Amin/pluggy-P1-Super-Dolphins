@@ -9,12 +9,11 @@
 </head>
 <body>
     <div class="grid_wrapper">
-    <div id="tonyheader" class="Pizza_logo">
+    <div id="tonyheader" class="pizza_logo">
         <img src="uploads/Grafiskt material/tonys-pizza-logo.svg"></img>
     </div>
 
-
-    <div id="kundkorg" class="Basket_logo">
+    <div id="kundkorg" class="basket_logo">
         <a href="kundvagn">
             <img src="uploads/Grafiskt material/tonys-pizza-basket.svg"></img>
         </a>

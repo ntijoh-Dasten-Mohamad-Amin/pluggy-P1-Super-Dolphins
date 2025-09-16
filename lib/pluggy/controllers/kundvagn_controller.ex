@@ -4,7 +4,6 @@ defmodule KundvagnController do
   alias Pluggy.Pizza
   alias Pluggy.User
   alias Pluggy.Kundvagn
-  alias Pluggy.KundvagnController
   import Pluggy.Template, only: [render: 2]
   import Plug.Conn, only: [send_resp: 3]
 
@@ -27,7 +26,7 @@ def index(conn) do
     redirect(conn, "/kundvagn")
   end
 
-  
+
 
   defp redirect(conn, url) do
     Plug.Conn.put_resp_header(conn, "location", url) |> send_resp(303, "")

@@ -2,7 +2,6 @@ defmodule Pluggy.Pizza do
   defstruct(id: nil, name: "", img: "", ingredients: [])
 
   require IEx
-  alias Code.Identifier
   alias Pluggy.Pizza
 
   def all do

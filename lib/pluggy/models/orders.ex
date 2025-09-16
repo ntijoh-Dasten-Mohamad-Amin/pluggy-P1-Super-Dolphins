@@ -2,7 +2,6 @@ defmodule Pluggy.Orders do
   defstruct(id: nil, name: "", gluten: false, size: "", ingredients: [])
 
   alias Pluggy.Orders
-  alias Pluggy.OrdersController
 
   def all do
     Postgrex.query!(DB, "SELECT * FROM orders", []).rows

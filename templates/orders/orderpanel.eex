@@ -44,7 +44,7 @@
 		Pizza ingredients: <%= comp.ingredients %><br>
 
 	<form action="/orders/<%= comp.id %>/destroy" method="POST">
-		<button class="knapp3" type="submit">Delivered</button>
+		<button class="knapp2" type="submit">Delivered</button>
 	</form>
 	</li>
 	</div>

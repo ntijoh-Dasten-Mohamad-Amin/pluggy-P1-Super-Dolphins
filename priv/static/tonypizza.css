@@ -1,15 +1,4 @@
-body {
-    background-color: white;
-
-}
-
-#kundkorg {
-    margin-top: 100px;
-    margin-left: 22%;
-    grid-area: knd;
-}
-
-
+/* index.eex */
 .grid_wrapper {
     display: grid;
     gap: 10px;
@@ -55,7 +44,7 @@ body {
     grid-area: div8;
 }
 
-.Pizza_logo {
+.pizza_logo {
     width: 80%;
     height: 87%;
     grid-area: hea;
@@ -67,11 +56,17 @@ body {
     justify-self: center;
 }
 
-.Basket_logo {
+.basket_logo {
     margin: 1px;
     width: 100px;
     height: 100px;
 
+}
+
+#kundkorg {
+    margin-top: 100px;
+    margin-left: 22%;
+    grid-area: knd;
 }
 
 .pizza_text {
@@ -99,7 +94,6 @@ body {
 .pizza img {
     width: 200px;
     height: 200px;
-
 }
 
 .pizza {
@@ -107,7 +101,6 @@ body {
     flex-wrap: wrap;
     justify-content:center ;
     text-align: left;
- 
 }
 
 .pizza_ingredients {
@@ -115,6 +108,7 @@ body {
 }
 
 
+/* orderpanel.eex */
 
 .order_holder {
     border-style: dashed;
@@ -127,6 +121,34 @@ body {
     justify-content: center;
 }
 
+.All_orders {
+    display: grid;
+    border-style: groove;
+    border-radius: 2px;
+    border-color: rgb(66, 66, 78);
+    width: 25%;
+    margin: 30px;
+    justify-items: center;
+}
+
+.order_holder_text {
+    margin: 20px;
+}
+
+.knapp1 {
+    background-color: rgb(74, 249, 252);
+    margin: 10px;
+    cursor: pointer;
+}
+
+.knapp2 {
+    background-color: rgb(99, 255, 117);
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* kundkorg.eex */
+
 .kundvagn_holder {
     border-style: dashed;
     border-radius: 10px;
@@ -138,63 +160,34 @@ body {
     justify-content: center;
 }
 
-.shopping_text {
-    text-decoration: none;
+.pizza_logo_basket {
+    width: 300px;
+    height: auto;
+    margin: 20px;
 }
 
 .kund_text {
     margin: 20px;
 }
 
-
-.All_orders {
-    display: grid;
-    border-style: groove;
-    border-radius: 2px;
-    border-color: rgb(66, 66, 78);
-    width: 25%;
-    margin: 30px;
-    justify-items: center;
-
+.order_text {
+    font-size: 1.5rem;
 }
-
-.order_holder_text {
-    margin: 20px;
-}
-
-
 .buttons {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
+    background-color: rgb(255, 0, 0);
+    width: 120px;
+    height: auto;
+    margin: 20px;
+    cursor: pointer;
 }
 
-.knapp1 {
+.buy_button {
     background-color: rgb(74, 249, 252);
-    margin: 10px;
+    width: 120px;
+    height: auto;
+    margin: 20px;    
     cursor: pointer;
 }
 
-.knapp2 {
-    background-color: pink;
-    margin: 10px;
-    cursor: pointer;
-}
 
-.knapp3 {
-    background: rgb(99, 255, 117);
-    margin: 10px;
-    cursor: pointer;
-}
-
-.knapp1:active{
-    color: blue;
-    width: 100px;
-}
-
-
-.knapp1:focus{
-    color: blue;
-    width: 100px;
-}
 
